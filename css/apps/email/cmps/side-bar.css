@@ -1,0 +1,10 @@
+.side-bar-container {}
+
+.side-bar-options li:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.btn-compose {
+    background-color: white;
+    border-radius: 10px;
+}

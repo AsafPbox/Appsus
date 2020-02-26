@@ -1,25 +1,34 @@
-/* @import "./cmps/nav-bar.css"; */
+@import "./cmps/nav-bar.css";
 /* @import "./cmps/footer.css"; */
+@import "./apps/email/cmps/side-bar.css";
 
-body { 
-    background-color: #92DCE5;
-}
+color-pallete {
+    color: #383D3B;
+    color: #EEE5E9;
+    color: #f7f5f5;
+    color: #7C7C7C;
+    color: #92DCE5;
+    color: #52DEE5;
+} 
 
-/* Nav-bar */
 
-nav {
-    align-items: center;
-    background-color: #52DEE5;
-    color: black;
-    min-height: 80px;
-}
-
-.nav-bar-list li a {
-    text-decoration: none;
-    padding-left: 10px;
+body {
+    background-color: #f7f5f5;
 }
 
 /* Helpers  */
+
+/* Email app */
+
+.email-app-container {
+    display: flex;
+
+}
+
+.emails-container li {
+    display: block;
+    width: 100%;
+}
 
 .flex {
     display: flex;

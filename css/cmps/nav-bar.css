@@ -1,0 +1,11 @@
+nav {
+    align-items: center;
+    background-color: #52DEE5;
+    color: black;
+    min-height: 80px;
+}
+
+.nav-bar-list li a {
+    text-decoration: none;
+    padding-left: 10px;
+}

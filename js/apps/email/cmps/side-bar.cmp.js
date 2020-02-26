@@ -2,10 +2,10 @@ import emailCompose from './email-compose.cmp.js'
 
 export default {
 	template: `
-        <section>
-            <button @click="composeEmail()">+ Compose</button>
+        <section class="side-bar-container">
+            <button @click="composeEmail()" class="btn-compose">+ Compose</button>
             <email-compose v-if="isClicked"></email-compose>
-            <ul>
+            <ul class="side-bar-options clean-list">
                 <li><img src="" />Inbox</li>
                 <li><img src="" />Starred</li>
                 <li><img src="" />Sent mail</li>
