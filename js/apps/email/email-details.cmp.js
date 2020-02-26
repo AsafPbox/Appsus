@@ -1,4 +1,5 @@
 import { emailService } from "../apps/email/services/email.service.js";
+import { utilService } from "../apps/email/services/util.service.js";
 
 export default {
 	template: `
@@ -13,5 +14,16 @@ export default {
             <div class="email-body"></div>
         </main>
     </section>
-    `
+    `,
+	data() {
+		return {
+            time,
+		};
+    },
+    methods: {
+
+    },
+	computed: {
+        
+    }
 };
