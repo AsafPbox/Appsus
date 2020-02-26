@@ -7,7 +7,6 @@ function load(key) {
     return JSON.parse(str);
 }
 
-
 export const storageService = {
     store,
     load

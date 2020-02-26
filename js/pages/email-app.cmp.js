@@ -25,6 +25,9 @@ export default {
         }),
         eventBus.$on('deleteEmail', function(payload){
             emailService.removeEmail(payload)
+        }),
+        eventBus.$on('deleteEmail', function(payload){
+            emailService.removeEmail(payload)
         })
 	},
 	components: {
