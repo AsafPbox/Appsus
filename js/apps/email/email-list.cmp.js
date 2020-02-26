@@ -4,11 +4,13 @@ export default {
     template: `
     <section class="emails-container">
         <ul>
-            <li v-for="email in emails" @click=printEmail(email)>
+            <li v-for="(email, idx) in emails" :key="email.id" @click="toggle(idx)">
                 {{email.senderName}}
                 |
                 {{email.subject}}
-                <email-preview v-show="" :email="email"></email-preview>
+                <div v-if="isClicked === idx">
+                    <email-preview :email="email"></email-preview>
+                </div>
             </li>  
         </ul>
     </section>
@@ -19,8 +21,8 @@ export default {
         }
     },
     methods: {
-        printEmail(email){
-            console.log(email)
+        toggle(idx){
+            this.isClicked = idx
         }
     },
     props: ['emails'],
