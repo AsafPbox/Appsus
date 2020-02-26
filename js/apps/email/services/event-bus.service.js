@@ -1,7 +1,9 @@
-export const EVENT_PUK = 'puk';
-export const EVENT_SHOW_MSG = 'showMsg';
+// export const EVENT_PUK = 'puk';
+// export const EVENT_SHOW_MSG = 'showMsg';
 
-export const eventBus = new Vue()
+const eventBus = new Vue();
+
+export default eventBus;
 
 // eventBus.$on(EVENT_PUK, (num)=>{
 //     console.log('Got a Puk!', num);
