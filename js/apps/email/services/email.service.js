@@ -20,10 +20,10 @@ function _createEmails() {
 	return emails;
 }
 
-function _createEmail(subject, body, senderName) {
+function _createEmail(subject, body) {
 	return {
 		id: utilService.makeId(),
-		senderName,
+		senderName: 'Yaron',
 		senderEmail : 'yaron@misterbit.co.il',
 		subject,
 		body,
@@ -59,9 +59,28 @@ function removeEmail(emailId) {
     return Promise.resolve('email REMOVED')
 }
 
+function getEmptyEmail() {
+    var emptyEmail =  {
+		id: utilService.makeId(),
+		senderName: null,
+		senderEmail : 'yaron@misterbit.co.il',
+		subject: null,
+		body: null,
+		isRead: false,
+		sentAt: Date.now()
+    }
+    return emptyEmail;
+}
+
+// function saveEmail(email){ 
+//     storageService.store(KEY, email)
+// }
+
 export const emailService = {
 	getEmails,
     countReadEmails,
     getById,
-    removeEmail
+    removeEmail,
+    getEmptyEmail
+    // saveEmail
 };
