@@ -17,13 +17,17 @@ export default {
     `,
 	data() {
 		return {
-            time,
+			time
 		};
-    },
-    methods: {
-
-    },
-	computed: {
-        
-    }
+	},
+	methods: {
+		getEmail() {
+			const emailId = this.$route.params.emailId;
+			console.log("emailId", emailId);
+			emailService.getById(emailId).then(email => {
+				this.email = email;
+			});
+		},
+		computed: {}
+	}
 };
