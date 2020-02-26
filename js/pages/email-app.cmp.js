@@ -22,7 +22,10 @@ export default {
 	created() {
 		emailService.getEmails().then(emails => {
 			this.emails = emails;
-		});
+        }),
+        eventBus.$on('deleteEmail', function(payload){
+            emailService.removeEmail(payload)
+        })
 	},
 	components: {
 		emailList,
