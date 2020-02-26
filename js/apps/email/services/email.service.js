@@ -1,11 +1,11 @@
 'use strict';
 
-import {utilService} from './util.service.js'
-import {storageService} from './storage.service.js'
+import {utilService} from './util.service.js';
+import {storageService} from './storage.service.js';
 
-const KEY = 'emailsDB'
+const KEY = 'emailsDB';
 
-var emails = _createEmails()
+var emails = _createEmails();
 
 function _createEmails() {
     var emails = storageService.load(KEY)
@@ -28,14 +28,25 @@ function _createEmail(subject, body, sender) {
         body,
         isRead: false,
         sentAt : Date.now()
-    } 
+    }; 
 }
 
 function getEmails() {
     return Promise.resolve(emails);
 }
 
-// CRUDL - Create, Read, Update, Delete, List
+// Fix later
+function countReadEmails() {
+    let total = emails.length;
+    var count = 0;
+    for (var i = 0; i < total; i++) {
+        if (emails[i].isRead) count++;
+    }
+    return count;
+}
+
+
 export const emailService = {
-    getEmails
+    getEmails,
+    countReadEmails
 }
