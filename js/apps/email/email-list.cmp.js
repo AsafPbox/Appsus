@@ -5,7 +5,7 @@ export default {
     <section class="emails-container">
         <ul>
             <li v-for="email in emails" @click=printEmail(email)>
-                {{email.sender}}
+                {{email.senderName}}
                 |
                 {{email.subject}}
                 <email-preview v-show="" :email="email"></email-preview>
