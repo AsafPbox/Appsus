@@ -20,10 +20,11 @@ function _createEmails() {
     return emails;
 }
 
-function _createEmail(subject, body, sender) {
+function _createEmail(subject, body, senderName) {
     return {
         id: utilService.makeId(),
-        sender,
+        senderName,
+        senderEmail,
         subject,
         body,
         isRead: false,
