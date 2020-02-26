@@ -1,9 +1,9 @@
 export default {
 	template: `
     <section>
-        <nav>
-    Apps Place
-    <ul>
+        <nav class="flex space-between">
+    <div class="logo-name">Apps Place</div>
+    <ul class="nav-bar-list flex clean-list">
         <li>
             <router-link to="/">
                 Home

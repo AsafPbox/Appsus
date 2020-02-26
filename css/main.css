@@ -2,17 +2,35 @@
 /* @import "./cmps/footer.css"; */
 
 body { 
-    background-color: lightblue;
+    background-color: #92DCE5;
 }
+
+/* Nav-bar */
 
 nav {
-    /* display: flex; */
+    align-items: center;
+    background-color: #52DEE5;
+    color: black;
+    min-height: 80px;
 }
 
-nav ul {
+.nav-bar-list li a {
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+/* Helpers  */
+
+.flex {
     display: flex;
 }
 
-nav li {
-    list-style: none;
+.flex.space-between {
+    justify-content: space-between;
+}
+
+.clean-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
