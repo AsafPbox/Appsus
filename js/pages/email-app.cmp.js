@@ -1,5 +1,5 @@
 import {emailService} from '../apps/email/services/email.service.js'
-import emailList from '../apps/email/email-list.cmp.js'
+import emailList from '../apps/email/cmps/email-list.cmp.js'
 import emailDetails from '../apps/email/pages/email-details.cmp.js'
 
 export default {
