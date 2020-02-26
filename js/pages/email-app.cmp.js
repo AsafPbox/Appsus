@@ -2,6 +2,7 @@ import {emailService} from '../apps/email/services/email.service.js'
 import emailList from '../apps/email/cmps/email-list.cmp.js'
 import eventBus from '../apps/email/services/event-bus.service.js'
 import sideBar from "../apps/email/cmps/side-bar.cmp.js";
+import emailDetails from '../apps/email/pages/email-details.cmp.js'
 
 export default {
 	template: `
