@@ -1,12 +1,14 @@
+import {router} from './routes.js'
 import navBar from './cmps/nav-bar.cmp.js'
 import susFooter from './cmps/footer.cmp.js';
 
 new Vue({
-	el: "#app",
+    el: "#app",
+    router,
 	template: `
         <section class="app-container">
             <nav-bar></nav-bar>
-            <h1>Appsus</h1>
+            <router-view></router-view>
             <sus-footer></sus-footer>
         </section>  
     `,
