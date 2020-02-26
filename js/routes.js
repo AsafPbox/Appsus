@@ -2,6 +2,7 @@ import home from './pages/home.cmp.js'
 import books from './pages/books.cmp.js'
 import keep from './pages/keep.cmp.js'
 import email from './pages/email-app.cmp.js'
+import emailDetails from './apps/email/pages/email-details.cmp.js'
 // import bookApp from './cmps/book-app.cmp.js'
 // import bookDetails from './cmps/book-details.cmp.js'
 // import aboutPage from './cmps/about-page.cmp.js'
@@ -13,6 +14,7 @@ const routes = [
     {path:'/books', component:books},
     {path:'/keep', component:keep},
     {path:'/email', component:email},
+    {path:'/email/:emailId', component:emailDetails},
     // {path:'/book', component:bookApp},
     // {path:'/book/:bookId', component:bookDetails},
     // {path:'/about',component:aboutPage,
@@ -25,4 +27,4 @@ const routes = [
 
 // export default routes
 
-export const router = new VueRouter({routes})
+export const router = new VueRouter({routes});

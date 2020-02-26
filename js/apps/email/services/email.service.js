@@ -24,7 +24,7 @@ function _createEmail(subject, body, senderName) {
 	return {
 		id: utilService.makeId(),
 		senderName,
-		senderEmail,
+		senderEmail : 'yaron@misterbit.co.il',
 		subject,
 		body,
 		isRead: false,
@@ -33,7 +33,8 @@ function _createEmail(subject, body, senderName) {
 }
 
 function getById(emailId) {
-	const email = emailsDB.find(email => email.id === emailId);
+    console.log(emails);
+	const email = emails.find(email => email.id === emailId);
 	return Promise.resolve(email);
 }
 
@@ -41,7 +42,7 @@ function getEmails() {
 	return Promise.resolve(emails);
 }
 
-// Fix later
+// Fix later to foreach?
 function countReadEmails() {
 	let total = emails.length;
 	var count = 0;
@@ -53,5 +54,6 @@ function countReadEmails() {
 
 export const emailService = {
 	getEmails,
-	countReadEmails
+    countReadEmails,
+    getById
 };
