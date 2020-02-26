@@ -33,7 +33,6 @@ function _createEmail(subject, body, senderName) {
 }
 
 function getById(emailId) {
-    console.log(emails);
 	const email = emails.find(email => email.id === emailId);
 	return Promise.resolve(email);
 }
