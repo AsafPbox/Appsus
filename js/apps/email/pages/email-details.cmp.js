@@ -41,8 +41,5 @@ export default {
 	},
 	created() {
 		this.getEmail();
-	},
-	mounted() {
-		
 	}
 };
