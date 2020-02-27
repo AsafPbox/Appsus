@@ -1,5 +1,5 @@
 import emailPreview from "./email-preview.cmp.js";
-import { utilService } from '../services/util.service.js';
+// import { utilService } from '../services/util.service.js';
 
 
 export default {
@@ -32,9 +32,10 @@ export default {
 		}
 	},
 	computed: {
-		// shortBodyText() {
-		//     var summary = '';
-		//     if ()
+        // formattedTime() {
+		// 	var t = this.email.sentAt;
+		// 	var time = utilService.showTime(t);
+		// 	return time;
 		// }
 	},
 	props: ["emails"],

@@ -28,7 +28,7 @@ function _createEmail(subject, body) {
 		subject,
 		body,
 		isRead: false,
-		sentAt: Date.now()
+		sentAt: moment().format('hh:mm, MMM Do YYYY')
 	};
 }
 
@@ -67,7 +67,7 @@ function getEmptyEmail() {
 		subject: null,
 		body: null,
 		isRead: false,
-		sentAt: Date.now()
+		sentAt: moment().format('hh:mm, MMM Do YYYY')
     }
     return emptyEmail;
 }
