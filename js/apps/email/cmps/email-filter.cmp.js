@@ -1,5 +1,4 @@
 import eventBus from '../services/event-bus.service.js'
-import {emailService} from '../services/email.service.js'
 
 export default {
     template:`
@@ -7,19 +6,17 @@ export default {
             <button @click="filterByRead()">FilterBy Read</button>
             <button @click="filterByUnRead()">FilterBy UnRead</button>
         </div>
-    `,
+    `
+    ,
     methods: {
         filterByRead(){
-            // emailService.getReadEmails()
-            var a = emailService.getReadEmails()
-            eventBus.$emit('readEmails', a)
+            eventBus.$emit('readEmails', true)
         },
         filterByUnRead(){
-            eventBus.$emit('unReadEmails')
+            this.$emit('UnReadEmails')
         }
     },
     components: {
-        eventBus,
-        emailService
+        eventBus
     }
 }
