@@ -3,8 +3,8 @@ import eventBus from '../services/event-bus.service.js'
 export default {
     template:`
         <div class="filter-emails">
-            <button @click="filterByRead()">FilterBy Read</button>
-            <button @click="filterByUnRead()">FilterBy UnRead</button>
+            <button @click="filterByRead()">Read emails</button>
+            <button @click="filterByUnRead()">Unread emails</button>
         </div>
     `
     ,

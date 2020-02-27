@@ -6,7 +6,10 @@ export default {
             <button @click="composeEmail()" class="btn-compose">+ Compose</button>
             <email-compose v-if="isClicked"></email-compose>
             <ul class="side-bar-options clean-list">
-                <li><img src="" />Inbox ({{unreadEmailCount}})</li>
+                <li><img src="" />   
+                    <router-link to="/email">
+                    Inbox ({{unreadEmailCount}})
+                    </router-link></li>
                 <li><img src="" />Starred</li>
                 <li><img src="" />Sent mail</li>
                 <li><img src="" />Drafts</li>

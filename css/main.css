@@ -1,6 +1,7 @@
 @import "./cmps/nav-bar.css";
 @import "./cmps/footer.css";
 @import "./apps/email/cmps/side-bar.css";
+@import "./fonts.css";
 
 color-pallete {
     color: #383D3B;
@@ -16,9 +17,14 @@ color-pallete {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     background-color: #f7f5f5;
     margin: 0 auto;
+    font-family: monts;
 }
 
 h1,
@@ -36,9 +42,9 @@ h6 {
 
 /* Email app */
 
-.email-app-container {
+/* .email-app-container {
     display: flex;
-}
+} */
 
 .email-list-container {
     flex-direction: column;
@@ -50,6 +56,20 @@ h6 {
     border-top: 1px solid #7C7C7C;
     border-bottom: 1px solid #7C7C7C;
     align-items: center;
+}
+
+.email-list-sender, .email-list-time {
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.email-list-content {
+    flex-grow: 1;
+}
+
+.email-list-subject, .email-list-body {
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 
 .email-list-item:hover {

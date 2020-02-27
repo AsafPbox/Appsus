@@ -7,12 +7,14 @@ import emailUtils from '../apps/email/cmps/email-utils.cmp.js'
 
 export default {
 	template: `
-        <section class="email-app-container">
+        <section class="email-app-container flex">
             <side-bar :unreadEmailCount="unreadEmailCount"></side-bar>
-            <email-utils></email-utils>
-            <section class="email-list-container">
-                <email-List :emails="emails"></email-list>
-                <email-details></email-details>
+            <section>
+                <email-utils class="flex"></email-utils>
+                <section class="email-list-container">
+                   <email-List :emails="emails"></email-list>
+                <!-- <email-details></email-details> -->
+                </section>
             </section>
         </section>
     `,

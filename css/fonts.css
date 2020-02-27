@@ -1,0 +1,9 @@
+@font-face {
+    font-family: monts;
+    src: url(fonts/Montserrat/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf);
+}
