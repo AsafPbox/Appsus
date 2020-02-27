@@ -5,9 +5,10 @@ export default {
         <div>
             <section class="flex">
             <div>{{email.subject}}</div>
-            <div><router-link :to="'/email/' + email.id"> 
+            <div>
+            <div @click="readEmail()"><router-link :to="'/email/' + email.id"> 
                 Expand
-            </router-link>
+            </router-link></div>
             <button @click="deleteEmail()">Delete</button></div>
             </section>    
             <section class="flex">
@@ -24,6 +25,9 @@ export default {
         deleteEmail(){
             var emailId = this.email.id;
             eventBus.$emit('deleteEmail', emailId)
+        },
+        readEmail(){
+            this.email.isRead = true;
         }
     }
 }

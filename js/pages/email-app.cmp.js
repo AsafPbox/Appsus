@@ -33,9 +33,10 @@ export default {
             .then(unread => {
                 this.unreadEmailCount = unread
         }),
-        eventBus.$on('readEmails', function(){
-            console.log('Pressed ReadEmails')
-        }),
+        eventBus.$on('readEmails', function(payload){
+            this.emails = payload
+            // console.log('Ths is payload :', this.emails)
+        }), 
         eventBus.$on('unReadEmails', function(){
             console.log('Pressed uNReadEmails')
         })

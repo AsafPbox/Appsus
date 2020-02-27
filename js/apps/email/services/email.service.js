@@ -41,6 +41,15 @@ function getEmails() {
 	return Promise.resolve(emails);
 }
 
+function getReadEmails() {
+	var readEmails = []
+	emails.forEach(email => {
+		if(email.isRead) readEmails.push(email);
+	})
+	return readEmails
+}
+
+
 // Fix later to foreach?
 function countUnreadEmails() {
 	let total = emails.length;
@@ -84,5 +93,6 @@ export const emailService = {
     getById,
     removeEmail,
     getEmptyEmail,
-    saveEmail
+	saveEmail,
+	getReadEmails
 };
