@@ -6,6 +6,7 @@ export default {
         <section>
             <h5>email utils</h5>
             <email-search></email-search>
+            <email-filter></email-filter>
         </section>
     `,
     components: {

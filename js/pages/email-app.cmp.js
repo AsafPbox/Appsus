@@ -4,14 +4,12 @@ import eventBus from '../apps/email/services/event-bus.service.js'
 import sideBar from '../apps/email/cmps/side-bar.cmp.js'
 import emailDetails from '../apps/email/pages/email-details.cmp.js'
 import emailUtils from '../apps/email/cmps/email-utils.cmp.js'
-import emailFilter from '../apps/email/cmps/email-filter.cmp.js'
 
 export default {
 	template: `
         <section class="email-app-container">
             <side-bar :unreadEmailCount="unreadEmailCount"></side-bar>
             <email-utils></email-utils>
-            <email-filter></email-filter>
             <section class="email-list-container">
                 <email-List :emails="emails"></email-list>
                 <email-details></email-details>
@@ -42,7 +40,6 @@ export default {
         }),
         eventBus.$on('readEmails', function(payload){
             this.filterBy = payload
-            console.log(this.filterBy)
         }),
         emailService.countUnreadEmails()
             .then(unread => {
@@ -55,6 +52,5 @@ export default {
         sideBar,
         eventBus,
         emailUtils,
-        emailFilter
 	}
 }

@@ -12,9 +12,6 @@ export default {
         filterByRead(){
             eventBus.$emit('readEmails', true)
         },
-        filterByUnRead(){
-            this.$emit('UnReadEmails')
-        }
     },
     components: {
         eventBus
