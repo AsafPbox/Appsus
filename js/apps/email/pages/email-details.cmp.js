@@ -1,13 +1,12 @@
 import { emailService } from '../services/email.service.js';
-import { utilService } from '../services/util.service.js';
 
 export default {
 	template: `
     <section v-if="email" class="email-details">
         <header>    
-        <div class="email-time">Time: {{formattedTime}}</div>
+        <div class="email-time">Time: {{email.sentAt}}</div>
         <div class="email-sender">Sender: {{email.senderName}}</div>
-        <div class="email-sender-letter">Letter: {{emailFirstLetter}}</div>
+        <div class="email-sender-letter hidden">Letter: {{emailFirstLetter}}</div>
         <div class="email-sender-address">Email: {{email.senderEmail}}</div>
         </header>
         <main>
@@ -34,13 +33,16 @@ export default {
 			let first = sender.charAt(0);
 			return first;
 		},
-		formattedTime() {
-			var t = this.email.sentAt;
-			var time = utilService.showTime(t);
-			return time;
-		}
+		// formattedTime() {
+		// 	var t = this.email.sentAt;
+		// 	var time = utilService.showTime(t);
+		// 	return time;
+		// }
 	},
 	created() {
 		this.getEmail();
+	},
+	mounted() {
+		
 	}
 };
