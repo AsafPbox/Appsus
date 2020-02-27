@@ -1,42 +1,42 @@
-import emailPreview from "./email-preview.cmp.js";
+import emailPreview from './email-preview.cmp.js'
 
 export default {
-	template: `
+    template: `
     <section class="emails-container">
-        <ul class="clean-list email-list-container" >
+        <ul class="clean-list">
             <li v-for="(email, idx) in emails" :key="email.id" @click="toggle(idx)">
-            <div class="email-list-item flex">    
-                <div class="email-list-sender">{{email.senderName}}</div>
-                <div class="email-list-subject">{{email.subject}}</div>
-                <div class="email-list-body">{{email.body}}</div>
-                <div class="email-list-time">{{email.sentAt}}</div>
-                </div>
-                 <div v-if="isClicked === idx">
+                {{email.senderName}}
+                |
+                {{email.subject}}
+                |
+                {{email.body}}
+                |
+                {{email.sentAt}}
+                <div v-if="isClicked === idx">
                     <email-preview :email="email"></email-preview>
-                 </div>
-            
+                </div>
             </li>  
         </ul>
     </section>
     `,
-	data() {
-		return {
-			isClicked: false
-		};
-	},
-	methods: {
-		toggle(idx) {
-			this.isClicked = idx;
-		}
-	},
-	computed: {
-		// shortBodyText() {
-		//     var summary = '';
-		//     if ()
-		// }
-	},
-	props: ["emails"],
-	components: {
-		emailPreview
-	}
-};
+    data (){
+        return {
+            isClicked: false,
+        }
+    },
+    methods: {
+        toggle(idx){
+            this.isClicked = idx
+        }
+    },
+    computed: {
+        // shortBodyText() {
+        //     var summary = '';
+        //     if ()
+        // }
+    },
+    props: ['emails'],
+    components: {
+        emailPreview
+    }
+}
