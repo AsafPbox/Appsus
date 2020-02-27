@@ -20,6 +20,11 @@ export default {
             </section> 
         </div>               
     `,
+    data() {
+        return {
+            // isReadEmail: false
+        }
+    },
     props: ['email'],
     methods: {
         deleteEmail(){
@@ -28,6 +33,7 @@ export default {
         },
         readEmail(){
             this.email.isRead = true;
+            // this.isReadEmail = true;
         }
     }
 }

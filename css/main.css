@@ -30,6 +30,9 @@ h6 {
     font-weight: normal;
 }
 
+.hidden {
+    display: none;
+}
 
 /* Email app */
 
@@ -49,10 +52,17 @@ h6 {
     align-items: center;
 }
 
-.email-list-item:hover, .email-list-item:active {
+.email-list-item:hover {
     background-color: rgba(146, 220, 229, 0.3);
 }
 
+.email-list-item .active {
+    background-color: rgba(146, 220, 229, 0.3);
+}
+
+.email-list-item.unread {
+    font-weight: 700;
+}
 
 /* Helpers  */
 
