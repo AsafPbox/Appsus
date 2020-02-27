@@ -1,6 +1,6 @@
 import home from './pages/home.cmp.js'
 import books from './pages/books.cmp.js'
-import keep from './pages/keep.cmp.js'
+import keep from './pages/keep-app.cmp.js'
 import email from './pages/email-app.cmp.js'
 import emailDetails from './apps/email/pages/email-details.cmp.js'
 // import bookApp from './cmps/book-app.cmp.js'

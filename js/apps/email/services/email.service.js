@@ -65,7 +65,7 @@ function removeEmail(emailId) {
     if(idx === -1) return Promise.reject('DID NOT REMOVE email')
     emails.splice(idx, 1);
     storageService.store(KEY, emails)
-    return Promise.resolve('email REMOVED')
+    // return Promise.resolve('email REMOVED')
 }
 
 function getEmptyEmail() {
