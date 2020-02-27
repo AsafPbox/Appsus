@@ -29,7 +29,7 @@ export default {
         emailsForDisplay() {
             if (!this.filterBy) return this.emails;
             return this.emails.filter(email => 
-                email.isRead === True
+                email.isRead
            );
         }
     },
