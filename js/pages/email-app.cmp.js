@@ -7,7 +7,7 @@ import emailDetails from '../apps/email/pages/email-details.cmp.js'
 export default {
 	template: `
         <section class="email-app-container">
-            <side-bar></side-bar>
+            <side-bar :unreadEmailCount="unreadEmailCount"></side-bar>
             <section class="email-list-container">
                 <email-List :emails="emails"></email-list>
                 <email-details></email-details>
@@ -16,7 +16,8 @@ export default {
     `,
 	data() {
 		return {
-			emails: []
+            emails: [],
+            unreadEmailCount: null
 		};
 	},
 	created() {
@@ -26,9 +27,11 @@ export default {
         eventBus.$on('deleteEmail', function(payload){
             emailService.removeEmail(payload)
         }),
-        eventBus.$on('deleteEmail', function(payload){
-            emailService.removeEmail(payload)
-        })
+        emailService.countUnreadEmails()
+            .then(unread => {
+                this.unreadEmailCount = unread
+                })
+
 	},
 	components: {
 		emailList,
