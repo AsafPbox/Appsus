@@ -72,15 +72,17 @@ function getEmptyEmail() {
     return emptyEmail;
 }
 
-// function saveEmail(email){ 
-//     storageService.store(KEY, email)
-// }
+function saveEmail(email){ 
+    emails.unshift(email);
+    storageService.store(KEY, emails);
+    return Promise.resolve(email);
+}
 
 export const emailService = {
 	getEmails,
     countReadEmails,
     getById,
     removeEmail,
-    getEmptyEmail
-    // saveEmail
+    getEmptyEmail,
+    saveEmail
 };

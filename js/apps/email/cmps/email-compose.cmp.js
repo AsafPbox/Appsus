@@ -21,9 +21,12 @@ export default {
             }
     },
     methods : {
-        // sendEmail(){
-        //     emailService.saveEmail(this.email)
-        // },
+        sendEmail(){
+            emailService.saveEmail(this.email)
+                .then(() => {
+                    this.$router.push('/') // need to return to main email page
+                })
+        },
         discardEmail(){
             console.log('Discard email')
         }
