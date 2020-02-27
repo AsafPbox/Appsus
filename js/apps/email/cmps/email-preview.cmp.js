@@ -2,15 +2,22 @@ import eventBus from '../services/event-bus.service.js'
 
 export default {
     template: `
-        <section>
-            <h3>{{email.id}}</h3>
-            <h3>{{email.body}}</h3>
-            <h4>{{email.sentAt}}</h4>
-            <router-link :to="'/email/' + email.id"> 
+        <div>
+            <section class="flex">
+            <div>{{email.subject}}</div>
+            <div><router-link :to="'/email/' + email.id"> 
                 Expand
             </router-link>
-            <button @click="deleteEmail()">Delete</button>
-        </section>               
+            <button @click="deleteEmail()">Delete</button></div>
+            </section>    
+            <section class="flex">
+                <div>{{email.senderName}}</div>
+                <div><{{email.senderEmail}}></div>
+            </section>
+            <section>
+                {{email.body}}
+            </section> 
+        </div>               
     `,
     props: ['email'],
     methods: {

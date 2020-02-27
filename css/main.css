@@ -1,5 +1,5 @@
 @import "./cmps/nav-bar.css";
-/* @import "./cmps/footer.css"; */
+@import "./cmps/footer.css";
 @import "./apps/email/cmps/side-bar.css";
 
 color-pallete {
@@ -9,26 +9,52 @@ color-pallete {
     color: #7C7C7C;
     color: #92DCE5;
     color: #52DEE5;
-} 
+    color: rgba(146, 220, 229, 0.3)
+}
 
+* {
+    box-sizing: border-box;
+}
 
 body {
     background-color: #f7f5f5;
+    margin: 0 auto;
 }
 
-/* Helpers  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
 
 /* Email app */
 
 .email-app-container {
     display: flex;
-
 }
 
-.emails-container li {
-    display: block;
+.email-list-container {
+    flex-direction: column;
     width: 100%;
 }
+
+.email-list-item {
+    height: 3rem;
+    border-top: 1px solid #7C7C7C;
+    border-bottom: 1px solid #7C7C7C;
+    align-items: center;
+}
+
+.email-list-item:hover, .email-list-item:active {
+    background-color: rgba(146, 220, 229, 0.3);
+}
+
+
+/* Helpers  */
 
 .flex {
     display: flex;

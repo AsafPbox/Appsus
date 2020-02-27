@@ -1,0 +1,8 @@
+.footer {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #52DEE5;
+    color: black;
+}
