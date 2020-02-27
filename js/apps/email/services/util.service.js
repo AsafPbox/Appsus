@@ -14,18 +14,19 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
   }
 
-function showTime(time) {
-    var ts = new Date();
-    var currDate = (ts.toDateString());
-    if (currDate === time.toDateString()) {
-        return time.toLocaleTimeString();
-    } else {
-        return time.toLocaleString();
-    }
-}
 
 export const utilService = {
     makeId,
     getRandomInt,
     showTime
+}
+
+function showTime(time) {
+    var ts = new Date();
+    var currDate = moment(ts).format('L')
+        if (currDate === moment(time).format('L')) {
+        return moment(time).format('LT');
+    } else {
+        return moment(time).format('lll');
+    }
 }

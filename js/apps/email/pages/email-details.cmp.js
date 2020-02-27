@@ -5,7 +5,7 @@ export default {
 	template: `
     <section v-if="email" class="email-details">
         <header>    
-        <div class="email-time">Time: {{email.sentAt}}</div>
+        <div class="email-time">Time: {{formattedTime}}</div>
         <div class="email-sender">Sender: {{email.senderName}}</div>
         <div class="email-sender-letter">Letter: {{emailFirstLetter}}</div>
         <div class="email-sender-address">Email: {{email.senderEmail}}</div>
@@ -33,6 +33,11 @@ export default {
 			var sender = this.email.senderName;
 			let first = sender.charAt(0);
 			return first;
+		},
+		formattedTime() {
+			var t = this.email.sentAt;
+			var time = utilService.showTime(t);
+			return time;
 		}
 	},
 	created() {
