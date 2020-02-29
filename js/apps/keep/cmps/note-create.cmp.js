@@ -1,27 +1,31 @@
+import eventBus from '../services/event-bus.service.js';
+
 export default {
     template: `
     <div class="keep-input-container">
-        <input type="text" class= "keep-input" v-bind:placeholder="desc" @keyup.enter="printInput">
+        <input type="text" class="keep-input" v-model="input" v-bind:placeholder="desc" @keyup.enter="addNote">
         <div class="keep-buttons">
-            <button @click="updatePlaceholder('Whats on your mind ?')">Text</button>
-            <button @click="updatePlaceholder('Enter img url')">Url</button>
-            <button @click="updatePlaceholder('Enter video url')">Videos</button>
-            <button @click="updatePlaceholder('Enter comma separated list')">ToDos</button>
+            <button @click="updatePlaceholder('Whats on your mind ?', 'text')">Text</button>
+            <button @click="updatePlaceholder('Enter img url', 'img')">Url</button>
+            <button @click="updatePlaceholder('Enter video url', 'video')">Videos</button>
+            <button @click="updatePlaceholder('Enter comma separated list', 'todo')">ToDos</button>
         </div>
     </div>
     `,
     data() {
 		return {
-            desc : 'Chose option',
-            input : ''
+            desc : 'Whats on your mind ?',
+            type : 'text',
+            input : '',
 		};
     },
     methods : {
-        updatePlaceholder: function(objType){
-            this.desc = objType;
+        updatePlaceholder: function(desc, inputType){
+            this.desc = desc;
+            this.type = inputType;
         },
-        printInput: function(){
-            console.log('Hi')
+        addNote: function(){
+            eventBus.$emit('newNote',{'type': this.type, 'input': this.input})
         }
     }
 }

@@ -21,7 +21,7 @@ export default {
         keepService.getNotes()
             .then(notes => {
             this.notes = notes;
-        }) 
+        })
     },
     components: {
         textBoxCmp,
