@@ -2,6 +2,8 @@
 @import "./cmps/footer.css";
 @import "./apps/email/cmps/side-bar.css";
 @import "./fonts.css";
+@import "./apps/keep/cmps/note-create.cmp.css";
+@import "./apps/keep/cmps/note-gallery.cmp.css";
 
 color-pallete {
     color: #383D3B;
