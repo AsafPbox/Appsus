@@ -5,13 +5,15 @@ nav {
     min-height: 80px;
 }
 
-nav img {
-    max-width: 1rem;
-    display: inline-block;
-    vertical-align: middle;
+.logo-name {
+    flex: 1;
 }
 
-.nav-bar-list li a {
-    text-decoration: none;
-    padding-left: 10px;
+.nav-bar-list li {
+    flex: 1;
+}
+
+nav img {
+    max-width: 1rem;
+    vertical-align: middle;
 }

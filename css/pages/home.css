@@ -1,0 +1,25 @@
+.home-container {
+    justify-content: space-evenly;
+}
+
+.home-item {
+    min-height: calc(100vh - 80px - 80px);
+    display: flex;
+    align-items: center;
+}
+
+.home-item p {
+    text-align: center;
+    font-family: monts;
+    font-size: 2rem;
+    color: #383D3B;
+    font-weight: 600;
+}
+
+/* .home-item p :hover {
+    color: #52DEE5;
+} */
+
+.home-container img {
+    max-width: 200px;
+}
