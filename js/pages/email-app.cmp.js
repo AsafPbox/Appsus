@@ -9,7 +9,7 @@ export default {
 	template: `
         <section class="email-app-container flex">
             <side-bar :unreadEmailCount="unreadEmailCount"></side-bar>
-            <section>
+            <section class="email-app-display">
                 <email-utils class="flex"></email-utils>
                 <section class="email-list-container">
                    <email-List :emails="emails"></email-list>

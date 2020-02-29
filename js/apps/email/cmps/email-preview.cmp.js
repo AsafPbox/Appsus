@@ -2,23 +2,27 @@ import eventBus from '../services/event-bus.service.js'
 
 export default {
     template: `
-        <div>
+        <section class="email-preview-container">
             <section class="flex">
-            <div>{{email.subject}}</div>
-            <div>
-            <div @click="readEmail()"><router-link :to="'/email/' + email.id"> 
-                Expand
-            </router-link></div>
-            <button @click="deleteEmail()">Delete</button></div>
+                <div class="email-preview-subject">
+                    {{email.subject}}
+                </div>
+            <div class="email-preview-btn">
+                <div @click="readEmail()"><router-link :to="'/email/' + email.id"> 
+                <img src="img/preview/expand.svg" />
+                </router-link>
+                </div>
+            <button @click="deleteEmail()"><img src="img/preview/delete.svg" /></button>
+            </div>
             </section>    
             <section class="flex">
-                <div>{{email.senderName}}</div>
-                <div><{{email.senderEmail}}></div>
+                <div class="email-preview-sender">{{email.senderName}}</div>
+                <div class="email-preview-email"><{{email.senderEmail}}></div>
             </section>
-            <section>
+            <section class="email-preview-body">
                 {{email.body}}
             </section> 
-        </div>               
+        </section>               
     `,
     data() {
         return {

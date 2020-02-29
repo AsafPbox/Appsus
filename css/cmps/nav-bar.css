@@ -2,7 +2,8 @@ nav {
     align-items: center;
     background-color: #52DEE5;
     color: black;
-    min-height: 80px;
+    min-height: 60px;
+    padding: 10px;
 }
 
 .logo-name {

@@ -1,11 +1,19 @@
 .side-bar-container {
-    /* min-width: 150px; */
+    min-width: 150px;
     flex-grow: 1;
     font-size: 1.5rem;
 }
 
+.side-bar-container img {
+    max-width: 1.5rem;
+}
+
 .side-bar-options li:hover {
     background-color: rgba(146, 220, 229, 0.3);
+}
+
+.side-bar-options li {
+    margin-left: 10px;
 }
 
 .btn-compose {
@@ -13,4 +21,5 @@
     border-radius: 10px;
     width: auto;
     font-size: 1.5rem;
+    margin-bottom: 10px;
 }

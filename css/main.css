@@ -1,8 +1,9 @@
-@import "./fonts.css";
+@import "./fonts/fonts.css";
 @import "./cmps/nav-bar.css";
 @import "./cmps/footer.css";
 @import "./pages/home.css";
 @import "./apps/email/cmps/side-bar.css";
+@import "./apps/email/cmps/email-list.css";
 @import "./apps/keep/cmps/note-create.cmp.css";
 @import "./apps/keep/cmps/note-gallery.cmp.css";
 
@@ -56,48 +57,26 @@ a:visited {
 
 /* Email app */
 
-/* .email-app-container {
-    display: flex;
-} */
-
-.email-list-container {
-    flex-direction: column;
-    width: 100%;
+.email-app-display {
+    width: 100vh;
 }
 
-.email-list-item {
-    height: 3rem;
-    border-top: 1px solid #7C7C7C;
-    border-bottom: 1px solid #7C7C7C;
-    align-items: center;
+.email-app-container {
+    margin: 10px;
 }
 
-.email-list-sender,
-.email-list-time {
-    overflow: hidden;
-    flex-grow: 1;
-}
+/* Email preview  */
 
-.email-list-content {
-    flex-grow: 1;
-}
-
-.email-list-subject,
-.email-list-body {
-    overflow: hidden;
-    text-overflow: ellipsis
-}
-
-.email-list-item:hover {
+.email-preview-container {
     background-color: rgba(146, 220, 229, 0.3);
 }
 
-.email-list-item .active {
-    background-color: rgba(146, 220, 229, 0.3);
+.email-preview-container img {
+    max-width: 1rem;
 }
 
-.email-list-item.unread {
-    font-weight: 700;
+.email-preview-subject {
+    font-size: 2rem;
 }
 
 /* Helpers  */
