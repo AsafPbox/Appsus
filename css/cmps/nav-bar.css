@@ -5,6 +5,12 @@ nav {
     min-height: 80px;
 }
 
+nav img {
+    max-width: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .nav-bar-list li a {
     text-decoration: none;
     padding-left: 10px;
