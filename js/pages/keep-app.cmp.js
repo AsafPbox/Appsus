@@ -1,6 +1,7 @@
 import noteCreate from '../apps/keep/cmps/note-create.cmp.js';
 import noteGallery from '../apps/keep/cmps/note-gallery.cmp.js';
 import {keepService} from '../apps/keep/services/keep.service.js';
+import eventBus from '../apps/keep/services/event-bus.service.js'
 
 export default {
     template:`
@@ -19,14 +20,18 @@ export default {
     methods: {
         updateInput: function(){
             console.log('HERE :')
-            // this.title = updatedInput
-        }
-    // },
-    // created() {
-    //     keepService.getNotes()
-    //         .then(notes => {
-    //         this.notes = notes;
-    //     })
+        },
+    },
+    created() {
+        keepService.getNotes()
+            .then(notes => {
+                this.notes = notes
+        }),
+        eventBus.$on('newNote', function(newNote){
+            var newNote = keepService.createNewNote(newNote.type, newNote.input)
+            console.log('Mynew Note :', newNote)
+            keepService.saveNote(newNote);
+        })
     },
     components: {
         noteCreate,
