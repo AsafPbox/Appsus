@@ -1,0 +1,28 @@
+.keep-input-container {
+    display: grid;
+    /* width: 50%; */
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: 1; */
+    margin: 10px;
+    justify-content: center;
+    border: 20px solid lightgray;
+    background-color: white;
+}
+
+.keep-input-container .keep-input {
+    border: none;
+}
+
+.keep-input-container .keep-buttons {
+    margin: 10px;
+}
+
+.keep-input-container .keep-buttons button {
+    background-color: inherit;
+    border: 0;
+    cursor: pointer;
+}
+
+.keep-input-container .keep-buttons button:hover {
+    cursor: pointer;
+}
